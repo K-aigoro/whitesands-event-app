@@ -8,7 +8,7 @@ function Header() {
       <header className="header">
         <div className="logo">
           <ion-icon name="logo-stencil"></ion-icon>
-          <span>WhitSandsEvents</span>
+          <span>WhiteSandsEvents</span>
         </div>
         <nav className="nav">
           <a href="#home">Home</a>
