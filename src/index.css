@@ -5,19 +5,13 @@ body {
     sans-serif;
   color: white;
   font-size: 20px;
-  /* background-image: url("./image/wp2349396-events-wallpapers.jpg"); */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
     url("./image/wp2349396-events-wallpapers.jpg") no-repeat center center fixed;
-
-  /* Full height */
-  /* height: 100%; */
-
   background-size: cover;
   background-color: center;
 }
 
 .app {
-  text-align: center;
   padding: 20px;
 }
 
@@ -30,11 +24,18 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   font-weight: bold;
   display: flex;
   gap: 5px;
-  align-items: flex-end;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav {
@@ -53,6 +54,16 @@ body {
   color: wheat;
 }
 
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* .work-button {
+  margin-left: 1rem;
+} */
+
 .book-event-button {
   background-color: #e20c57;
   color: white;
@@ -66,6 +77,7 @@ body {
 h1 {
   font-size: 50px;
   margin: 0;
+  text-align: center;
 }
 
 p {
@@ -93,22 +105,50 @@ p {
   color: white;
   border: 2px solid #f50057;
 }
+.work-button1 {
+  background: transparent;
+  color: white;
+  border: 2px solid #f50057;
+}
 
-.work-button:hover {
+.work-button:hover,
+.work-button1:hover {
   background-color: #e20c57;
   color: white;
 }
 
 .scroll-down {
+  text-align: center;
   margin-top: 230px;
 }
 
 .arrow {
   font-size: 25px;
 }
+
 @media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    width: 50%;
+    text-align: center;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+  .work-button1 {
+    display: none;
+  }
   .button {
-    width: 30%;
+    width: 40%;
     padding: 12px 0;
     font-size: 18px;
   }
@@ -117,20 +157,8 @@ p {
     background-position: center;
     background-repeat: no-repeat;
   }
-  .header {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav a {
-    margin-top: 10px 0;
-  }
   .main__content {
-    margin-top: 50px;
+    margin-top: 200px;
   }
   h1 {
     font-size: 36px;
